@@ -1,0 +1,70 @@
+CREATE TABLE hired_candidates (
+  id int NOT NULL,
+  first_name varchar(100) NOT NULL,
+  middle_name varchar(100) DEFAULT NULL,
+  last_name varchar(100) NOT NULL,
+  email varchar(50) NOT NULL,
+  mobile_num bigint NOT NULL,
+  hired_city varchar(50) NOT NULL,
+  hired_date datetime NOT NULL,
+  degree varchar(100) NOT NULL,
+  aggr_per double precision DEFAULT NULL,
+  current_pincode int DEFAULT NULL,
+  permanent_pincode int DEFAULT NULL,
+  hired_lab varchar(20) DEFAULT NULL,
+  attitude_remark varchar(15) DEFAULT NULL,
+  communication_remark varchar(15) DEFAULT NULL,
+  knowledge_remark varchar(15) DEFAULT NULL,
+  status varchar(20) NOT NULL,
+  creator_stamp datetime DEFAULT NULL,
+  creator_user int DEFAULT NULL,
+  PRIMARY KEY (id)
+)
+
+
+CREATE TABLE fellowship_candidates (
+  id int,
+  first_name varchar(100) NOT NULL,
+  middle_name varchar(100) DEFAULT NULL,
+  last_name varchar(100) NOT NULL,
+  email varchar(50) NOT NULL,
+  mobile_num bigint NOT NULL,
+  hired_city varchar(50) NOT NULL,
+  hired_date datetime NOT NULL,
+  degree varchar(50) NOT NULL,
+  aggr_per double precision DEFAULT NULL,
+  current_pincode int DEFAULT NULL,
+  permanent_pincode int DEFAULT NULL,
+  hired_lab varchar(20) DEFAULT NULL,
+  attitude_remark varchar(15) DEFAULT NULL,
+  communication_remark varchar(15) DEFAULT NULL,
+  knowledge_remark varchar(15) DEFAULT NULL,
+  birth_date date NOT NULL,
+  is_birth_date_verified int DEFAULT 0,
+  parent_name varchar(50) DEFAULT NULL,
+  parent_occupation varchar(100) NOT NULL,
+  parent_mobile_num bigint NOT NULL,
+  parent_annual_sal double precision DEFAULT NULL,
+  local_addr varchar(255) NOT NULL,
+  permanent_addr varchar(150) DEFAULT NULL,
+  photo_path varchar(500) DEFAULT NULL,
+  joining_date date DEFAULT NULL,
+  candidate_status varchar(20) NOT NULL,
+  personal_info_filled int DEFAULT 0,
+  bank_info_filled int DEFAULT 0,
+  educational_info_filled int DEFAULT 0,
+  doc_status varchar(20) DEFAULT NULL,
+  remark varchar(150) DEFAULT NULL,
+  creator_stamp datetime DEFAULT NULL,
+  creator_user int DEFAULT NULL,
+  PRIMARY KEY (id)
+) 
+
+insert into fellowship_candidates values(1, 'deepak', 'Kiran', 'Patil', 'deepak.63584@gmail.com ', 8956748596, 'Pune','2019-12-13',
+										'B.E', 75.25,5245,5478,'Mumbai','Good','Good','Good','1999-12-13', 1,'Kiran','Farmer',7584962547,300000,
+										'Pune','Pune','photo_path','2019-12-13','Good',1,1,1,'Correct','Good',null, 1);
+
+insert into fellowship_candidates values(2,'Mahesh','Shyam','Waghmare','waghmaremahesh012@gmail.com',8985745896,'Mumbai','2022-10-12','BE',84.25,
+										415322,415311,'Mumbai','Nice','Nice','Nice','1998-08-28',1,'Shyam','Teacher',8596987458,300000,
+										'Mumbai','Revangoan','photo','2023-02-13','Nice',0,0,0,'OK' ,'Nice','2023-03-14',1);
+
